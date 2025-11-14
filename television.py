@@ -1,3 +1,15 @@
+#-----------------------------------------------------------------------------------#
+# CSCI 1620
+# Fall 2025
+# Lab 12, television.py
+# Rachael Tomaso
+
+# Create a simple program for a television remote. This lab is mainly to
+# become familiar with Git. The main file was given to us, and we need to ensure the
+# output matches the comments in main.
+#-----------------------------------------------------------------------------------#
+
+
 class Television:
     MIN_VOLUME = 0
     MAX_VOLUME = 2
@@ -48,8 +60,6 @@ class Television:
                 self.__muted = False
             if self.__volume < Television.MAX_VOLUME:
                 self.__volume += 1
-#            else:
- #               self.__volume = Television.MAX_VOLUME
 
     def volume_down(self):
         if self.__status:
@@ -58,8 +68,6 @@ class Television:
                 self.__muted = False
             if self.__volume > Television.MIN_VOLUME:
                 self.__volume -= 1
-#            else:
-#                self.__volume = Television.MIN_VOLUME
 
     def __str__(self):
         return f"Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}"
